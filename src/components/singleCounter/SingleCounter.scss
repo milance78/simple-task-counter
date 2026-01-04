@@ -1,0 +1,19 @@
+.single-counter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.mirror-span {
+  position: absolute;
+  visibility: hidden;
+  white-space: pre;
+}
+
+.name-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+

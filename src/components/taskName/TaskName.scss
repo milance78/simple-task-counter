@@ -1,0 +1,14 @@
+.task-name-wrapper {
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: rgb(67, 67, 67);
+
+  .counter-name {
+    font-size: 25px;
+    font-family: Roboto;
+    background: transparent;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+  }
+}

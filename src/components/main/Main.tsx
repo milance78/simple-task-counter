@@ -1,0 +1,30 @@
+import React, { useEffect, useState } from 'react';
+import './Main.scss';
+import SingleCounter from '../singleCounter/SingleCounter';
+import { useAppSelector } from '../../redux/store';
+
+const Main = () => {
+  const [date, setDate] = useState('');
+
+  const counters = useAppSelector(state => state.counters.counters);
+
+  useEffect(() => {
+    const tick = () => setDate(new Date().toLocaleDateString('en-GB').split('/').join('. ') + ".");
+    tick();
+    const interval = setInterval(tick, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className='main'>
+      <div className="date">
+        {date}
+      </div>
+      {counters.map(counter => (
+        <SingleCounter key={counter.id} id={counter.id} />
+      ))}
+    </div>
+  );
+};
+
+export default Main;

@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .add-counter-button {
+        color: rgb(82, 82, 82);
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px rgb(110, 110, 110) solid;
+        border-radius: 5px;
+        padding: 10px 35px;
+        background: white;
+        font-size: 15px;
+        text-align: center;
+        .add-icon {
+            text-transform: "none";
+            height: 40px;
+            width: 40px;
+            margin-bottom: 5px;
+        }
+    }
+}

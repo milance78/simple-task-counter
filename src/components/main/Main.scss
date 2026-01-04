@@ -1,0 +1,16 @@
+.main {
+    margin-left: 200px;
+    margin-right: 100px;
+    width: calc(100% - 650px);
+    .date {
+        display: flex;
+        margin-left: auto;
+        margin-top: 30px;
+        padding: 12px 15px;
+        border-radius: 5px;
+        width: fit-content;
+        background: rgb(242, 242, 242);
+        font-size: 18px;
+        color: rgb(61, 61, 61);
+    }
+}
