@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simple-task-counter/static/css/main.12d13b1b.css",
+    "main.js": "/simple-task-counter/static/js/main.f80cb749.js",
+    "index.html": "/simple-task-counter/index.html",
+    "main.12d13b1b.css.map": "/simple-task-counter/static/css/main.12d13b1b.css.map",
+    "main.f80cb749.js.map": "/simple-task-counter/static/js/main.f80cb749.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12d13b1b.css",
+    "static/js/main.f80cb749.js"
+  ]
+}
