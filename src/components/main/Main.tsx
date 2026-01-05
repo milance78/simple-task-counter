@@ -18,7 +18,7 @@ const Main = () => {
   return (
     <div className='main'>
       <div className="title-date">
-        <div className='title'>Simple Task Counter</div>
+        <div className='title'>Simple <span>Task Counter</span></div>
         <div className='date'>{date}</div>
       </div>
       <hr />
