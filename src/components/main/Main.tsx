@@ -17,9 +17,11 @@ const Main = () => {
 
   return (
     <div className='main'>
-      <div className="date">
-        {date}
+      <div className="title-date">
+        <div className='title'>Simple Task Counter</div>
+        <div className='date'>{date}</div>
       </div>
+      <hr />
       {counters.map(counter => (
         <SingleCounter key={counter.id} id={counter.id} />
       ))}

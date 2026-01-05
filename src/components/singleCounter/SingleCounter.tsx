@@ -51,6 +51,7 @@ const SingleCounter: React.FC<Props> = ({ id }) => {
           <DeleteActions counterId={id} />
         </div>
       </div>
+      <hr />
     </>
   );
 };

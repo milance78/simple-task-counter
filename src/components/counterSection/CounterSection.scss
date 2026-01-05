@@ -12,12 +12,12 @@
   .value {
     font-weight: bold;
     border: 1px solid rgb(188, 188, 188);
-    height: 70px;
+    height: 60px;
     width: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 33px;
     // box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.08);
     // border: none;
 
@@ -51,8 +51,8 @@
   /* DECREMENT BUTTON */
   .decrement {
     position: absolute;
-    top: 60px;
-    right: -30px;
+    top: 40px;
+    right: -28px;
     z-index: 1;
     width: 40px;
     height: 40px;
