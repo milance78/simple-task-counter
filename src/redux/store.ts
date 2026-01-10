@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 import countersReducer from './features/countersSlice'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import profileReducer from './features/profileSlice'
+
 // import type { RootState, AppDispatch } from './store'
 
 export type RootState = ReturnType<typeof store.getState>
@@ -9,6 +11,7 @@ export type AppDispatch = typeof store.dispatch
 export const store = configureStore({
   reducer: {
     counters: countersReducer,
+    profile: profileReducer,
   },
 })
 

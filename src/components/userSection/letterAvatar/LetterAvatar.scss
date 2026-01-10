@@ -1,0 +1,13 @@
+.letter-avatar {
+    border-radius: 50%;
+    // border: solid 2px;
+    color: var(--primary);
+    background: var(--bg);
+    font-weight: bold;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+}

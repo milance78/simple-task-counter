@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { incrementGivenCounter, decrementGivenCounter } from '../../redux/features/countersSlice';
-import minusOne from '../../assets/img/minus one.png';
+// import minusOne from '../../assets/img/minus one.png';
 
 import './CounterSection.scss';
 
@@ -81,7 +81,8 @@ const CounterSection: React.FC<Props> = ({ counter }) => {
             dispatch(decrementGivenCounter(counter.id));
           }}
         >
-          <img src={minusOne} alt="minus one" />
+          -1
+          {/* <img src={minusOne} alt="minus one" /> */}
         </Button>
       )}
     </div>

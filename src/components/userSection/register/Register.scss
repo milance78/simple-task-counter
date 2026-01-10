@@ -1,0 +1,13 @@
+.register-container {
+  position: absolute;
+  top: 48px;
+  right: 80px;
+  width: 400px;
+  padding: 50px 60px;
+  background: white;
+  border: solid var(--primary);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
