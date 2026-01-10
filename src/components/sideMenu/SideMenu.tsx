@@ -1,7 +1,7 @@
 import React from 'react'
 import './SideMenu.scss'
 import NewTask from '../newTask/NewTask';
-import User from '../userSection/User';
+import User from '../userSection/user/User';
 // import pcd from '../../assets/img/pcd.jpg'
 
 const SideMenu = () => {

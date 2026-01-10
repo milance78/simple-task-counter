@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import './User.scss'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import { useAppSelector } from '../../redux/store'
-import Login from './login/Login'
-import Register from './register/Register'
-import CurrentUser from './currentUser/CurrentUser'
-import LetterAvatar from './letterAvatar/LetterAvatar'
+import { useAppSelector } from '../../../redux/store'
+import Login from '../login/Login'
+import Register from '../register/Register'
+import CurrentUser from '../currentUser/CurrentUser'
+import LetterAvatar from '../letterAvatar/LetterAvatar'
 
 const User = () => {
   const [open, setOpen] = useState(false)

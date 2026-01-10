@@ -1,13 +1,19 @@
 .login-container {
-  position: absolute;
-  top: 48px;
-  right: 80px;
-  width: 400px;
-  padding: 50px 60px;
-  background: white;
-  border: solid var(--primary);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    position: absolute;
+    top: 48px;
+    right: -130px;
+    color: rgb(138, 138, 138);
+    width: 400px;
+    padding: 50px 60px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: solid 1px rgb(174, 174, 174);
+}
+
+span {
+    color: rgb(0, 91, 176);
+    cursor: pointer;
 }
