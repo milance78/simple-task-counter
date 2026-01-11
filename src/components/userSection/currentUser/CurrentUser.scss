@@ -1,10 +1,19 @@
 .current-user {
   position: absolute;
   top: 48px;
-  right: 80px;
-  width: 400px;
-  padding: 50px 60px;
+  right: -25px;
+  color: rgb(138, 138, 138);
+  width: 300px;
+  padding: 30px 30px;
   background: white;
-  border: solid var(--primary);
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: solid 1px rgb(174, 174, 174);
+
+  .logout-button {
+    margin-top: 50px;
+  }
+
 }

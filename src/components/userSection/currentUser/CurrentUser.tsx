@@ -4,9 +4,10 @@ import { auth } from '../../../firebase/firebase-config'
 import { Button } from '@mui/material'
 import { useAppDispatch } from '../../../redux/store'
 import { logout } from '../../../redux/features/profileSlice'
-const CurrentUser = () => {
-  const dispatch = useAppDispatch()
 
+
+const CurrentUser = () => {
+  const dispatch = useAppDispatch();
   const handleLogout = async () => {
     await signOut(auth)
     dispatch(logout())
@@ -14,9 +15,13 @@ const CurrentUser = () => {
 
   return (
     <div className="current-user">
-      <Button variant="contained" onClick={handleLogout}>
+      <Button
+        className='logout-button'
+        // variant="contained"
+        onClick={handleLogout}>
         Log out
       </Button>
+
     </div>
   )
 }

@@ -8,6 +8,8 @@ const Main = () => {
   const [date, setDate] = useState('');
 
   const counters = useAppSelector(state => state.counters.counters);
+  const { profileNavigation } =
+    useAppSelector(state => state.profile)
 
   useEffect(() => {
     const tick = () => setDate(new Date().toLocaleDateString('en-GB').split('/').join('. ') + ".");
@@ -26,6 +28,7 @@ const Main = () => {
       {counters.map(counter => (
         <SingleCounter key={counter.id} id={counter.id} />
       ))}
+      {profileNavigation}
     </div>
   );
 };

@@ -1,23 +1,23 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import './User.scss'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import { useAppSelector } from '../../../redux/store'
+import { useAppDispatch, useAppSelector } from '../../../redux/store'
 import Login from '../login/Login'
 import Register from '../register/Register'
 import CurrentUser from '../currentUser/CurrentUser'
-import LetterAvatar from '../letterAvatar/LetterAvatar'
+import { setFormVisibility, toggleFormVisibility } from '../../../redux/features/profileSlice'
 
 const User = () => {
-  const [open, setOpen] = useState(false)
+  const dispatch = useAppDispatch();
   const wrapperRef = useRef<HTMLDivElement | null>(null)
 
-  const { profileNavigation, isLoggedIn, currentUser } =
+  const { profileNavigation, isFormVisible, isLoggedIn, currentUser } =
     useAppSelector(state => state.profile)
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
-        setOpen(false)
+        dispatch(setFormVisibility(false));
       }
     }
     window.addEventListener('mousedown', handleOutsideClick)
@@ -26,22 +26,24 @@ const User = () => {
 
   return (
     <div className="profile" ref={wrapperRef}>
-      {isLoggedIn ? (
-        <LetterAvatar letter={currentUser?.email?.[0] ?? null} />
-      ) : (
-        <AccountCircleIcon
+      {/* profile icon  */}
+      {isLoggedIn
+        ? <div className='letter-avatar'
+          onClick={() => dispatch(toggleFormVisibility())}>
+          {currentUser?.email?.[0] ?? null}
+        </div>
+        : <AccountCircleIcon
           className="icon"
-          onClick={() => setOpen(prev => !prev)}
+          onClick={() => dispatch(toggleFormVisibility())}
         />
-      )}
-
-      {open && (
+      }
+      {/* form pop out window */}
+      {isFormVisible &&
         <>
-          {profileNavigation === 'login' && <Login />}
-          {profileNavigation === 'register' && <Register />}
-          {profileNavigation === 'current' && <CurrentUser />}
-        </>
-      )}
+          {profileNavigation === 'login' ? <Login />
+            : profileNavigation === 'register' ? <Register />
+              : profileNavigation === 'current' && <CurrentUser />}
+        </>}
     </div>
   )
 }

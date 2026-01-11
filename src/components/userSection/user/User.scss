@@ -9,3 +9,17 @@
     color: rgb(117, 117, 117);
   }
 }
+.letter-avatar {
+    border-radius: 50%;
+    background: rgb(112, 179, 255);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px gray;
+    cursor: pointer;
+}
