@@ -27,32 +27,38 @@ const Login = () => {
     setLoading(true)
 
     try {
+      console.log('Querying Firestore for username:', username)
+
       // 1️⃣ Find user by username
       const q = query(
         collection(db, 'users'),
         where('username', '==', username)
       )
-
       const snap = await getDocs(q)
 
       if (snap.empty) {
-        setError('Invalid username or password.')
-        setLoading(false)
+        setError('Username not found.')
         return
       }
 
       const userDoc = snap.docs[0].data()
       const email = userDoc.email
+      console.log('Found user email:', email)
 
-      // 2️⃣ Authenticate with email + password
+      // 2️⃣ Authenticate with Firebase Auth
       const res = await signInWithEmailAndPassword(auth, email, password)
+      console.log('Login success:', res.user)
 
+      // 3️⃣ Update Redux
       dispatch(loginSuccess(res.user))
+
     } catch (err) {
+      console.error('Login error:', err)
+
       if (err instanceof FirebaseError) {
         setError(mapFirebaseError(err.code))
       } else {
-        setError('Unexpected error. Please try again.')
+        setError('Operation failed. Please check your network or credentials.')
       }
     } finally {
       setLoading(false)

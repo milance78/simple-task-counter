@@ -17,7 +17,6 @@ const CurrentUser = () => {
     <div className="current-user">
       <Button
         className='logout-button'
-        // variant="contained"
         onClick={handleLogout}>
         Log out
       </Button>
